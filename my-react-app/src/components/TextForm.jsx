@@ -60,8 +60,8 @@ function TextForm(props){
       </div>
       <div className="container my-3" style={{color: props.mode === "dark" ? "white" : "black"}}>
         <h2>Your Text Summary</h2>
-        <p>{text.split(" ").filter((e) =>{return e.length!==0}).length} words {text.length} Characters</p>
-        <p>{0.008*text.split(" ").filter((e) =>{return e.length!==0}).length}Seconds Read</p>
+        <p>{text.split(/\s+/).filter((e) =>{return e.length!==0}).length} words {text.length} Characters</p>
+        <p>{0.008*text.split(/\s+/).filter((e) =>{return e.length!==0}).length}Seconds Read</p>
         <h2>Preview</h2>
         <p>{text.length > 0 ? text:"Nothing to Preview"}</p>
       </div>

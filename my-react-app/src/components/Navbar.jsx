@@ -1,7 +1,15 @@
 import React from 'react'
+import {useState} from 'react'
 import {Link} from 'react-router-dom'
 
 function Navbar(props){
+
+  const [active, setActive] = useState("home")
+
+  const highlight = (page)=>{
+    setActive("page")
+  }
+
 return (
 <>
 
@@ -14,10 +22,12 @@ return (
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+          <Link className={`nav-link ${active === "home" ? "active" : ""}`} aria-current="page" to="/" onClick={()=>highlight("home")}>Home</Link>
+          {/* <Link className="nav-link" aria-current="page" to="/">Home</Link> */}
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/about">{props.aboutText}</Link>
+          {/* <Link className="nav-link" to="/about">{props.aboutText}</Link> */}
+          <Link className={`nav-link ${active === "about" ? "active" : ""}`} aria-current="page" to="/about" onClick={()=>highlight("about")}>{props.aboutText}</Link>
         </li>
         
       </ul>
