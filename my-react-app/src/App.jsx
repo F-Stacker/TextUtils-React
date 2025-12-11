@@ -1,4 +1,4 @@
-// import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import TextForm from './components/TextForm'
 import About from './components/About'
@@ -24,7 +24,7 @@ function App(){
       setMode("dark")
       document.body.style.backgroundColor = "#042743"
       showAlert("Dark Mode has been enable", "success")
-      document.title = "TextUtils - Dark Mode"
+      // document.title = "TextUtils - Dark Mode"
       // setInterval(()=>{
       //   document.title = "TextUtils is Amazing Mode"
       // },2000)
@@ -37,25 +37,25 @@ function App(){
       setMode("light")
       document.body.style.backgroundColor = "white"
       showAlert("Light Mode has been enable", "success")
-      document.title = "TextUtils - Light Mode"
+      // document.title = "TextUtils - Light Mode"
     }
   }
   return(
     <>
-      {/* <BrowserRouter>
-        <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/>
+      <BrowserRouter basename="/TextUtils-React">
+        <Navbar title="Text Utils" aboutText="About Us" mode={mode} toggleMode={toggleMode}/>
         <Alert alert={alert} />
         
         <Routes>
           <Route path="/about" element={<About mode={mode} toggleMode={toggleMode} />} />  
         
-          <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/>} />  
+          <Route path="/" element={<TextForm showAlert={showAlert} heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces" mode={mode}/>} />  
         </Routes>  
-      </BrowserRouter> */}
+      </BrowserRouter>
   
-      <Navbar title="Text Utils" aboutText="About Us" mode={mode} toggleMode={toggleMode}/>
+      {/* <Navbar title="Text Utils" aboutText="About Us" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert} />
-      <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/>
+      <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/> */}
       
     </>
   )

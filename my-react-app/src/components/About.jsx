@@ -97,9 +97,9 @@ function About(props) {
                 data-bs-target="#collapseOne"
                 aria-expanded="true"
                 aria-controls="collapseOne"
-                style={{backgroundColor: props.mode === "dark" ? "#0a5fa1" : "white", color: props.mode === "dark" ? "white" : "black"}}
+                style={{backgroundColor: props.mode === "dark" ? "rgb(36 74 104)" : "white", color: props.mode === "dark" ? "white" : "black"}}
               >
-                Accordion Item #1
+                <strong>Accordion Item #1</strong>
               </button>
             </h2>
             <div
@@ -129,9 +129,9 @@ function About(props) {
                 data-bs-target="#collapseTwo"
                 aria-expanded="false"
                 aria-controls="collapseTwo"
-                style={{backgroundColor: props.mode === "dark" ? "#0a5fa1" : "white", color: props.mode === "dark" ? "white" : "black"}}
+                style={{backgroundColor: props.mode === "dark" ? "rgb(36 74 104)" : "white", color: props.mode === "dark" ? "white" : "black"}}
               >
-                Accordion Item #2
+                <strong>Accordion Item #2</strong>
               </button>
             </h2>
             <div
@@ -161,9 +161,9 @@ function About(props) {
                 data-bs-target="#collapseThree"
                 aria-expanded="false"
                 aria-controls="collapseThree"
-                style={{backgroundColor: props.mode === "dark" ? "#0a5fa1" : "white", color: props.mode === "dark" ? "white" : "black"}}
+                style={{backgroundColor: props.mode === "dark" ? "rgb(36 74 104)" : "white", color: props.mode === "dark" ? "white" : "black"}}
               >
-                Accordion Item #3
+                <strong>Accordion Item #3</strong>
               </button>
             </h2>
             <div
